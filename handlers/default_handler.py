@@ -16,5 +16,5 @@ async def process_admin_command(message: Message, dialog_manager: DialogManager)
     await dialog_manager.start(state=state_admin.start, mode=StartMode.RESET_STACK)
 
 @router.message(Command(commands=['id']))
-async def process_searth_id_command(message: Message):
-    await message.answer(f'Ваш ID: <b>{message.from_user.id}</b>', parse_mode='HTML')
+async def process_search_id_command(message: Message):
+    await message.answer(f'Ваш ID: <code>{message.from_user.id}</code>')
